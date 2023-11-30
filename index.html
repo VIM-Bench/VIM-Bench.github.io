@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VIM: Probing Multimodal Large Language Models for Visual Embedded Instruction Following">
+  <meta name="keywords" content="VIM, VIM-Bench, VIM Bench">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> VIM: Probing Multimodal Large Language Models for Visual Embedded Instruction Following </title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/gradio.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <!-- <span class="vimbench" style="vertical-align: middle">VIM</span> -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-six-fifths">
+                <!-- VIM -->
+                <h2 class="title is-3"><img id="logo" width="10%" src="static/images/VIM_logo.png"></h2>
+              </div>
+            </div>
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Probing Multimodal Large Language Models for 
+            <br>
+            Visual Embedded Instruction Following
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href=" ">Yujie Lu</a ><sup style="color:#FEBC11;">1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://xjli.github.io/">Xiujun Li</a ><sup style="color:#4B2E83">2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.cs.ucsb.edu/~william/">William Wang</a ><sup style="color:#FEBC11;">1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~yejin/">Yejin Choi</a ><sup style="color:#4B2E83">2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#FEBC11; font-weight:normal">&#x25B6 </b> <sup>1</sup> University of California, Santa Barbara</b></span>
+            <span class="author-block"><b style="color:#4B2E83; font-weight:normal">&#x25B6 </b> <sup>2 </sup> University of Washington</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <br>
+            <span class="author-block"><b>*</b> Equal contribution.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.17647"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/VIM-Bench/VIM_TOOL"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code and Dataset</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+        <div class="content has-text-centered">
+          <img src="static/images/website_teaser.png" alt="website teaser" width="100%"/>
+          <p> Probing results of five MLLMs for visual instruction following under our introduced VIM probing paradigm on four benchmarks VQAv2, MME, MM-Vet, and RefCOCO series, across three in-context learning settings ZS: Zero Shot , OS: One Shot, PS: Pair Shot.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="background-color:#efeff081" id="Abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce VISUAL EMBEDDED INSTRUCTION (VIM), a new framework designed to evaluate the visual instruction following capability of Multimodal Large Language Models (MLLMs). VIM challenges the MLLMs by embedding the instructions into the visual scenes, demanding strong visual interpretative skills for instruction following. We adapt VIM to various benchmarks, including VQAv2, MME, MM-Vet, and RefCOCO series, compose a VIM bench, and probe diverse MLLMs across three distinct in-context learning settings: Zero Shot, One Shot, and Pair Shot. We observe that there is a significant performance disparity between the open-source MLLMs and GPT-4V, implying that their proficiency in visual instruction comprehension is not up to par. Our results highlight a promising direction for the enhancement of MLLMs capabilities on instruction following. We aim VIM to serve as a useful norm for advancing the state of the art and driving further progress in the field.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"  style="background-color:#ffffff" id="Overview">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">VIM-Bench</h2>
+        <div class="content has-text-justified">
+          <p>
+          Instruction following, is viewed as one key capability of high-performing MLLMs. In this work, VIM is created to examine the instruction following capability of MLLMs, specifically the visual embedded instruction following.
+          <br>
+          The current evaluation norm of MLLMs takes two modalities as input: image and text (as instruction). The existing MLLMs is built on top of the LLMs, benefiting from its strong text understanding capability. For the current MLLMs evaluation paradigm, instruction is presented in the text modality, which can utilize the strong language priors from the LLMs for understanding. VIM takes one step further by embedding the textual instruction into the visual space (image), this enhancement demands not just textual but also strong visual comprehension for the instruction understanding. It asks for the strong visual interpretation capability to recognize and follow the embedded instruction in the image.
+          </p>
+          <div class="content has-text-centered">
+            <img src="static/images/VISE_overview.png" alt="VISE_overview" width="100%"/>
+            <p>
+              Zero shot evaluation paradigm comparison for MLLMs. (a) Left: Image + Text instruction as two separate modalities are fed into MLLMs for inference; (b) Right: VIM only takes the image modality with the text instruction embedded in the image , no additional text prompt is required. The above example is from MM-Vet (question #86). Note: Image modality input , Text modality input.
+            </p>
+          </div>
+          <p>
+          Under the VIM framework, we also propose three in-context learning settings designed to probe the MLLMs models across a spectrum of challenges as depicted in below Figure.
+            <ul>
+              <li><b>Zero Shot</b>: the input is a single image with an embedded
+                instruction. One answer is expected.</li>
+              <li><b>One Shot</b>: the input is an image embedded with N pairs (i.e. N = 2) of image-instruction-answer triplet. In the last pair, include only the image-question pair, and an answer is expected for this last query.</li>
+              <li><b>Pair Shot</b>: the input is a single image with N pairs (i.e. N = 2) of image-question embedded. Answers are required for all N pairs.</li>
+            </ul>
+          </p>
+          <div class="content has-text-centered">
+            <img src="static/images/VISE_Settings.png" alt="VISE_Settings" width="100%"/>
+            <p>
+              Three in-context evaluation settings: (a) Left: Zero Shot has only one question to be answered; (b) Middle: One Shot, the image is composed of one image-instruction-answer as a reference, the answer for the second image-instruction query is required; (c) Right: Pair Shot, the image is composed of two image-instruction pairs, and answer for both are required.
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section"  style="background-color:#ffffff" id="Experiment">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+          <p>
+          We first build our VIM bench based on the existing representative benchmarks (e.g., VQAv2, MME, MM-Vet, REC), then examine the MLLMs (e.g., LLaVA-v1.5, InstructBLIP, MiniGPT-v2, GPT-4V) on VIM bench for fair comparison.
+          </p>
+          <img src="static/images/main_table.png" alt="main_table" width="100%"/>
+          <div class="content has-text-centered">
+            <p>
+              Main quantitative results over each benchmark, including sub set and full set for three settings.
+            </p>
+          </div>
+          <p>
+            How to lay out the image and embedded instruction in one visual space? There are many combinations to position the instruction and image in the same visual space. Here we also enumerate important two elements we investigated: 1) instruction location, 2) prompt type.
+          </p>
+          <img src="static/images/explore_setting.png" alt="main_table" width="100%"/>
+          <div class="content has-text-centered">
+            <p>
+              Left: Exploration setup for instruction location on zero shot evaluation for MM-Vet.
+              Right: Exploration setup for text prompt on zero shot evaluation for MM-Vet. * denotes from the origin paper reported.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@misc{lu2023vim,
+      title={VIM: Probing Multimodal Large Language Models for Visual Embedded Instruction Following}, 
+      author={Yujie Lu and Xiujun Li and William Yang Wang and Yejin Choi},
+      year={2023},
+      eprint={2311.17647},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer"> 
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
